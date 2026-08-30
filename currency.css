@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.converter-box {
+    flex: 1 1 420px;
+    max-width: 480px;
+    background: #c7c4c4;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rate-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rate-title {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.rate-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #b30000;
+    margin-top: 5px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fff;
+    gap: 10px;
+}
+
+.input-wrapper input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+}
+
+.flag-icon {
+    width: 28px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.input-wrapper select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.swap-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#swap-btn {
+    background: #cf1010;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#swap-btn:hover {
+    background: #e0e0e0;
+    transform: rotate(180deg);
+}
+
+
+#convert-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+#convert-btn:hover {
+    background-color: #800000;
+}
+
+.info-sidebar {
+    flex: 1 1 350px;
+    max-width: 400px;
+    background: #d3d1d1;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-height: 50vh;
+    overflow-y: auto;
+
+}
+
+.info-sidebar h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    
+}
+
+.sidebar-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.fee-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fee-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.fee-name {
+    color: #444;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.fee-price {
+    font-weight: bold;
+    color: #b30000;
+    white-space: nowrap;
+}
+
+.tip-box {
+    margin-top: 20px;
+    background: #fdf2f2;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #800000;
+    line-height: 1.4;
+    border-left: 3px solid #b30000;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .converter-box, .info-sidebar {
+        max-width: 100%;
+        width: 100%;
+    }
+}

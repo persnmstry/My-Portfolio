@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="currency.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+
+    <header>
+        <!-- <a class="title" href="https://lancaster.edu.gh/">
+         <img src="LUG logo.png" alt="School Logo" width="180" height="auto">
+        </a> -->
+    </header>
+
+<div class="main-container">
+    <main class="converter-box">
+        <div class="rate-header">
+            <span class="rate-title">Mid-market exchange rate ℹ️</span>
+            <div id="rate-display" class="rate-value">1 USD = -- GHS</div>
+        </div>
+        
+        <div class="input-group">
+            <label for="amount">Amount</label>
+            <div class="input-wrapper">
+                <input type="number" id="amount" value="1" min="1">
+
+                <img id="from-flag" class="flag-icon" src="https://flagcdn.com/w40/us.png" alt="USD Flag">
+                <select id="from-currency">
+                    <option value="USD" data-code="us" selected>USD</option>
+                    <option value="GHS" data-code="gh">GHS</option>
+                    <option value="EUR" data-code="eu">EUR</option>
+                    <option value="NGN" data-code="ng">NGN</option>
+                    <option value="GBP" data-code="gb">GBP</option>
+                    <option value="CAD" data-code="ca">CAD</option>
+                    <option value="AUD" data-code="au">AUD</option>
+                    <option value="JPY" data-code="jp">JPY</option>
+                    <option value="CNY" data-code="cn">CNY</option>
+                    <option value="KES" data-code="ke">KES</option>
+                    <option value="ZAR" data-code="za">ZAR</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="swap-container">
+            <button id="swap-btn" title="Swap Currencies">⇅</button>
+        </div>
+
+        <div class="input-group">
+            <label for="result">Converted to</label>
+            <div class="input-wrapper">
+                <input type="text" id="result" placeholder="0.00" readonly>
+                <img id="to-flag" class="flag-icon" src="https://flagcdn.com/w40/gh.png" alt="GHS Flag">
+                <select id="to-currency">
+                    <option value="USD" data-code="us">USD</option>
+                    <option value="GHS" data-code="gh" selected>GHS</option>
+                    <option value="EUR" data-code="eu">EUR</option>
+                    <option value="NGN" data-code="ng">NGN</option>
+                    <option value="GBP" data-code="gb">GBP</option>
+                    <option value="CAD" data-code="ca">CAD</option>
+                    <option value="AUD" data-code="au">AUD</option>
+                    <option value="JPY" data-code="jp">JPY</option>
+                    <option value="CNY" data-code="cn">CNY</option>
+                    <option value="KES" data-code="ke">KES</option>
+                    <option value="ZAR" data-code="za">ZAR</option>
+                    <option value="CFA" data-code=""></option>
+                </select>
+            </div>
+        </div>
+    
+        <button id="convert-btn">Convert</button>
+    </main>
+        
+    <!-- <aside class="info-sidebar">
+        <h2>International Student Fees</h2>
+        <p class="sidebar-subtitle">Foreign Identification Managemnt System (FIMS)</p>
+        <ul class="fee-list">
+            <li>
+                <span class="fee-name">Non-Citizen Ghana Card (First Time)</span>
+                <span class="fee-price">$120 USD</span>
+            </li>
+            
+            <li>
+                <span class="fee-name">Ghana Card Renewal </span>
+                <span class="fee-price">$78 USD / yr </span>
+            </li>
+            <li>
+                <span class="fee-name">Ghana Card Replacement</span>
+                <span class="fee-price">$78 USD </span>
+            </li>
+            <li>
+                <span class="fee-name">Ghana card Record update only</span>
+                <span class="fee-price"> Free </span>
+            </li>
+            <li>
+                <span class="fee-name">Update of Records with card Replacement</span>
+                <span class="fee-price">$70 USD </span>
+            </li>
+            <li>
+                <span class="fee-name">Nationality Update</span>
+                <span class="fee-price"> $120 USD </span>
+            </li>
+            <li>
+                <span class="fee-name">Multiple Year Renewal (Min.2 years)</span>
+                <span class="fee-price"> $75 USD </span>
+            </li>
+            
+            <h2>Ghana Immigration Services</h2>
+            <p class="sidebar-subtitle">Student Residence Permit Fees</p>
+            
+            <li>
+                <span class="fee-name">Student Residence Permit (ECOWAS Nationals)</span>
+                <span class="fee-price"> GHS 194 </span>
+            </li>
+            <li>
+                <span class="fee-name">Student Residence Permit (Non-ECOWAS / Other Nationals)</span>
+                <span class="fee-price"> GHS 259 </span>
+            </li>
+            
+            <li>
+                <span class="fee-name">Ghanaians with Foreign Passport</span>
+                <span class="fee-price">GHS 129</span>
+            </li>
+            <h2>Late Permit Renewal Penalties</h2>
+            <li>
+                <span class="fee-name">ECOWAS Nationals</span>
+                <span class="fee-price">GHS 200 / month delayed </span>
+            </li>
+            <li>
+                <span class="fee-name">NON-ECOWAS / Other Nationals</span>
+                <span class="fee-price">GHS 300 / month delayed </span>
+            </li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Student Tip:</strong> Non-Citizen Ghana Card payments are charged in USD equivalent or converted using official bank rates.
+            <br/>
+            <strong>Note:</strong> The Non-Citizen Ghana card fee is separate from the Residence Permit.
+        </div>
+    </aside>  
+</div> -->
+
+    <script src="currency.js"></script>
+</body>
+</html>
